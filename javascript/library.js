@@ -6,4 +6,11 @@ class Library {
     constructor(books={}) {
         this.#books = books;
     }
+
+    // the method for printing the information of each book in the library
+    printBooks() {
+        for (key in Object.keys(this.#books)) {
+            console.log(key);
+        }
+    }
 }
