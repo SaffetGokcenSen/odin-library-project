@@ -15,6 +15,23 @@ class Library {
     }
 }
 
-// A library is created with no books inside
+class Book {
+    #author;
+    #title;
+    #numOfPages;
+    #publisher;
+    #publicationDate;
+    #readStatus;
+
+    constructor(author, title, numOfPages, publisher, publicationDate, readStatus) {
+        this.#author = author;
+        this.#title = title;
+        this.#numOfPages = numOfPages;
+        this.#publisher = publisher;
+        this.#publicationDate = publicationDate;
+        this.#readStatus = readStatus;
+    }
+}
+
 const theLibrary = new Library();
 theLibrary.printBooks();
