@@ -35,3 +35,5 @@ class Book {
 
 const theLibrary = new Library();
 theLibrary.printBooks();
+
+const sampleBook = new Book("Test Author", "Test Title", 300, "Test Publisher", 1990, true);
