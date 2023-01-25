@@ -14,3 +14,7 @@ class Library {
         }
     }
 }
+
+// A library is created with no books inside
+const theLibrary = new Library();
+theLibrary.printBooks();
