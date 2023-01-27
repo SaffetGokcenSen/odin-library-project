@@ -32,6 +32,11 @@ class Book {
         this.#publicationDate = publicationDate;
         this.#readStatus = readStatus;
     }
+
+    // gets the title of the book
+    getTitle() {
+        return this.#title;
+    }
 }
 
 const theLibrary = new Library();
