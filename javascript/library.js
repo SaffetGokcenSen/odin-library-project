@@ -40,6 +40,21 @@ class Book {
     getTitle() {
         return this.#title;
     }
+
+    // gets the author of the book
+    getAuthor() {
+        return this.#author;
+    }
+
+    // gets the number of pages of the book
+    getNumOfPages() {
+        return this.#numOfPages;
+    }
+
+    // gets the publisher of the book
+    getPublisher() {
+        return this.#publisher;
+    }
 }
 
 const theLibrary = new Library();
