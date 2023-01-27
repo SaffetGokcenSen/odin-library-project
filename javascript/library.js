@@ -46,3 +46,7 @@ const theLibrary = new Library();
 theLibrary.printBooks();
 
 const sampleBook = new Book("Test Author", "Test Title", 300, "Test Publisher", 1990, true);
+const sampleBook2 = new Book("Test Author2", "Test Title2", 423, "Test Publisher2",2010, true);
+theLibrary.addBook(sampleBook);
+theLibrary.addBook(sampleBook2);
+theLibrary.printBooks();
