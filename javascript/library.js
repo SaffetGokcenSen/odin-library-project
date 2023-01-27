@@ -9,10 +9,13 @@ class Library {
 
     // the method for printing the information of each book in the library
     printBooks() {
-        let key;
-        for (key in Object.keys(this.#books)) {
-            console.log(key);
-        }
+        console.log(this.#books);
+    }
+
+    // add a new book to the #books object with the key equal to the title of 
+    // the book
+    addBook(newBook) {
+        this.#books[newBook.getTitle()] = newBook;
     }
 }
 
