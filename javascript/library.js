@@ -55,6 +55,16 @@ class Book {
     getPublisher() {
         return this.#publisher;
     }
+
+    // gets the publication date of the book
+    getPublicationDate() {
+        return this.#publicationDate;
+    }
+
+    // gets the read status of the book
+    getReadStatus() {
+        return this.#readStatus;
+    }
 }
 
 const theLibrary = new Library();
