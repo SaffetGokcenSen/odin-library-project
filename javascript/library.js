@@ -17,6 +17,11 @@ class Library {
     addBook(newBook) {
         this.#books[newBook.getTitle()] = newBook;
     }
+
+    // remove the book from the books object, i.e. from the library
+    removeBook(removedBook) {
+        delete this.#books[removedBook.getTitle()];
+    } 
 }
 
 class Book {
@@ -74,4 +79,6 @@ const sampleBook = new Book("Test Author", "Test Title", 300, "Test Publisher", 
 const sampleBook2 = new Book("Test Author2", "Test Title2", 423, "Test Publisher2",2010, true);
 theLibrary.addBook(sampleBook);
 theLibrary.addBook(sampleBook2);
+theLibrary.printBooks();
+theLibrary.removeBook(sampleBook);
 theLibrary.printBooks();
