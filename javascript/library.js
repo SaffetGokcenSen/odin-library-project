@@ -70,6 +70,11 @@ class Book {
     getReadStatus() {
         return this.#readStatus;
     }
+
+    // sets the read status of the book
+    setReadStatus(theStatus) {
+        this.#readStatus = theStatus;
+    }
 }
 
 const theLibrary = new Library();
