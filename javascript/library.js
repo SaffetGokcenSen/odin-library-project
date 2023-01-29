@@ -32,7 +32,7 @@ class Book {
     #publicationDate;
     #readStatus;
 
-    constructor(author, title, numOfPages, publisher, publicationDate, readStatus) {
+    constructor(author, title, numOfPages, publisher, publicationDate, readStatus=false) {
         this.#author = author;
         this.#title = title;
         this.#numOfPages = numOfPages;
