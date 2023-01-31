@@ -75,6 +75,11 @@ class Book {
     setReadStatus(theStatus) {
         this.#readStatus = theStatus;
     }
+
+    // removes the book from the library
+    removeMeFromLibrary(theLibrary) {
+        theLibrary.removeBook(this.#title);
+    }
 }
 
 const theLibrary = new Library();
