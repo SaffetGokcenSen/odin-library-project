@@ -19,8 +19,8 @@ class Library {
     }
 
     // remove the book from the books object, i.e. from the library
-    removeBook(removedBook) {
-        delete this.#books[removedBook.getTitle()];
+    removeBook(theTitle) {
+        delete this.#books[theTitle];
     } 
 }
 
@@ -79,9 +79,10 @@ class Book {
 
 const theLibrary = new Library();
 const sampleBook = new Book("Test Author", "Test Title", 300, "Test Publisher", 1990);
-const sampleBook2 = new Book("Test Author2", "Test Title2", 423, "Test Publisher2",2010);
+const sampleBook2 = new Book("Test Author2", "Test Title2", 423, "Test Publisher2", 2010);
+const sampleBook3 = new Book("Test Author3", "Test Title3", 231, "Test Publisher3", 1991);
 theLibrary.addBook(sampleBook);
 theLibrary.addBook(sampleBook2);
-theLibrary.removeBook(sampleBook);
+theLibrary.addBook(sampleBook3);
 sampleBook2.setReadStatus(true);
 theLibrary.printBooks();
