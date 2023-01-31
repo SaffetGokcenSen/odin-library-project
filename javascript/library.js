@@ -90,4 +90,5 @@ theLibrary.addBook(sampleBook);
 theLibrary.addBook(sampleBook2);
 theLibrary.addBook(sampleBook3);
 sampleBook2.setReadStatus(true);
+sampleBook.removeMeFromLibrary(theLibrary);
 theLibrary.printBooks();
