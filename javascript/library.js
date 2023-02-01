@@ -92,3 +92,5 @@ theLibrary.addBook(sampleBook3);
 sampleBook2.setReadStatus(true);
 sampleBook.removeMeFromLibrary(theLibrary);
 theLibrary.printBooks();
+
+const addBookButton = document.getElementById('add-book-button');
