@@ -1,3 +1,10 @@
 #add-book-form {
     display: none;
 }
+
+#close-form-button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
