@@ -12,3 +12,14 @@
 #close-form-button:hover {
     background-color: orange;
 }
+
+#submit-book-info {
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#submit-book-info:hover {
+    background-color: yellowgreen;
+}
