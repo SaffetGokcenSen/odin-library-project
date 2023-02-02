@@ -98,11 +98,19 @@ const addBookForm = document.getElementById('add-book-form');
 addBookButton.addEventListener('click', bringInTheForm);
 const closeFormButton = document.getElementById('close-form-button');
 closeFormButton.addEventListener('click', magicAwayTheForm)
+const submitBookInfo = document.getElementById('submit-book-info');
+submitBookInfo.addEventListener('click', deliverBookInfo);
 
 function bringInTheForm() {
     addBookForm.style.display = "block";
 }
 
 function magicAwayTheForm() {
+    addBookForm.style.display = "none";
+}
+
+function deliverBookInfo(evt) {
+    evt.preventDefault();
+    console.log(document.getElementById('book-title').value);
     addBookForm.style.display = "none";
 }
