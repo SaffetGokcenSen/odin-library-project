@@ -96,6 +96,7 @@ theLibrary.printBooks();
 const addBookButton = document.getElementById('add-book-button');
 const addBookForm = document.getElementById('add-book-form');
 addBookButton.addEventListener('click', bringInTheForm);
+const closeFormButton = document.getElementById('close-form-button');
 
 function bringInTheForm() {
     addBookForm.style.display = "block";
