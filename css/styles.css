@@ -23,3 +23,8 @@
 #submit-book-info:hover {
     background-color: yellowgreen;
 }
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+}
