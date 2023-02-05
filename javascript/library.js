@@ -129,6 +129,20 @@ function magicAwayTheForm() {
 // This function submits the book info
 function deliverBookInfo(evt) {
     evt.preventDefault();
-    console.log(document.getElementById('book-title').value);
+    // A new book is created using the form values
+    const theBook = new Book(
+        document.getElementById('author-name').value, 
+        document.getElementById('book-title').value, 
+        document.getElementById('number-of-pages').value, 
+        document.getElementById('publisher').value, 
+        document.getElementById('publication-date').value
+    );
+    // The new book is added to the library
+    theLibrary.addBook(theBook);
+    // The add-book-form is reset
+    addBookForm.reset();
+    // The books are printed to the console for test purposes
+    theLibrary.printBooks();
+    // The add-book-form disappears
     addBookForm.style.display = "none";
 }
