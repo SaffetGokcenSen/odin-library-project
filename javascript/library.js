@@ -160,6 +160,16 @@ function deliverBookInfo(evt) {
     
     // the part containing the book info
     let childDiv1 = document.createElement("div");
+
+    // p element for displaying the book title
+    let pTitle = document.createElement("p");
+    // the title of the book
+    let titleText = document.createTextNode(bookTitle);
+    // the title of the book is displayed
+    pTitle.appendChild(titleText);
+    // the paragraph with the title of the book is added to the book list
+    divBookList.appendChild(pTitle);
+    
     
     // the part containing the book buttons part
     let childDiv2 = document.createElement("div");
