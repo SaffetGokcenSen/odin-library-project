@@ -129,13 +129,18 @@ function magicAwayTheForm() {
 // This function submits the book info
 function deliverBookInfo(evt) {
     evt.preventDefault();
+    let bookTitle = document.getElementById('book-title').value;
+    let bookAuthor = document.getElementById('author-name').value;
+    let bookPublisher = document.getElementById('publisher').value;
+    let bookPublicationDate = document.getElementById('publication-date').value;
+    let bookPageNumber = document.getElementById('number-of-pages').value;
     // A new book is created using the form values
     const theBook = new Book(
-        document.getElementById('author-name').value, 
-        document.getElementById('book-title').value, 
-        document.getElementById('number-of-pages').value, 
-        document.getElementById('publisher').value, 
-        document.getElementById('publication-date').value
+        bookAuthor, 
+        bookTitle, 
+        bookPageNumber, 
+        bookPublisher, 
+        bookPublicationDate
     );
     // The new book is added to the library
     theLibrary.addBook(theBook);
