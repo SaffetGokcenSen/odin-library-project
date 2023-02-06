@@ -126,6 +126,9 @@ function magicAwayTheForm() {
     addBookForm.style.display = "none";
 }
 
+// the access to the book list div
+let divBookList = document.getElementById("book-list");
+
 // This function submits the book info
 function deliverBookInfo(evt) {
     evt.preventDefault();
