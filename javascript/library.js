@@ -153,4 +153,7 @@ function deliverBookInfo(evt) {
     theLibrary.printBooks();
     // The add-book-form disappears
     addBookForm.style.display = "none";
+
+    // the div containing the book info part and the book buttons part
+    let parentDiv = document.createElement("div");
 }
