@@ -156,4 +156,11 @@ function deliverBookInfo(evt) {
 
     // the div containing the book info part and the book buttons part
     let parentDiv = document.createElement("div");
+
+    
+    // the part containing the book info
+    let childDiv1 = document.createElement("div");
+    
+    // the part containing the book buttons part
+    let childDiv2 = document.createElement("div");
 }
