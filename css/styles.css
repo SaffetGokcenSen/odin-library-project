@@ -24,7 +24,7 @@
     background-color: yellowgreen;
 }
 
-.book-list {
+#book-list {
     display: flex;
     flex-direction: column;
 }
