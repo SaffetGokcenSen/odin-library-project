@@ -173,7 +173,7 @@ function deliverBookInfo(evt) {
     let pTitle = document.createElement("p");
     // the title of the book
     let titleText = document.createTextNode(bookTitle);
-    // the title of the book is displayed
+    // the title of the book is written into the paragraph
     pTitle.appendChild(titleText);
     // the paragraph with the title of the book is added to the book list
     divBookList.appendChild(pTitle);
@@ -182,7 +182,7 @@ function deliverBookInfo(evt) {
     let pAuthor = document.createElement("p");
     // the author of the book
     let authorText = document.createTextNode(bookAuthor);
-    // the author of the book is displayed
+    // the author is written into the paragraph
     pAuthor.appendChild(authorText);
     // the paragraph with the author of the book is added to the book list
     divBookList.appendChild(pAuthor);
@@ -190,12 +190,21 @@ function deliverBookInfo(evt) {
     // p element for displaying the book publisher
     let pPublisher = document.createElement("p");
     // the publisher of the book
-    let publisherText = document.createTextNode(+ bookPublisher);
-    // the publisher of the book is displayed
+    let publisherText = document.createTextNode(bookPublisher);
+    // the publisher is written into the paragraph
     pPublisher.appendChild(publisherText);
     // the paragraph with the publisher of the book is added to the book list
     divBookList.appendChild(pPublisher);
     
+    // p element for displaying the book publication date
+    let pPublicationDate = document.createElement("p");
+    // the publication date of the book
+    let pubDateText = document.createTextNode(bookPublicationDate);
+    // the publication date is written into the paragraph
+    pPublicationDate.appendChild(pubDateText);
+    // the paragraph with the publication date of the book is added to the book
+    // list
+    divBookList.appendChild(pPublicationDate);
     
     // the part containing the book buttons part
     let childDiv2 = document.createElement("div");
