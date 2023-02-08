@@ -32,7 +32,8 @@ class Book {
     #publicationDate;
     #readStatus;
 
-    constructor(author, title, numOfPages, publisher, publicationDate, readStatus=false) {
+    constructor(author, title, numOfPages, publisher, publicationDate, 
+        readStatus=false) {
         this.#author = author;
         this.#title = title;
         this.#numOfPages = numOfPages;
@@ -85,11 +86,17 @@ class Book {
 // Create a new Library object
 const theLibrary = new Library();
 // Create the first sample book object
-const sampleBook = new Book("Test Author", "Test Title", 300, "Test Publisher", 1990);
+const sampleBook = new Book(
+    "Test Author", "Test Title", 300, "Test Publisher", 1990
+    );
 // Create the second sample book object
-const sampleBook2 = new Book("Test Author2", "Test Title2", 423, "Test Publisher2", 2010);
+const sampleBook2 = new Book(
+    "Test Author2", "Test Title2", 423, "Test Publisher2", 2010
+    );
 // Create the third sample book object
-const sampleBook3 = new Book("Test Author3", "Test Title3", 231, "Test Publisher3", 1991);
+const sampleBook3 = new Book(
+    "Test Author3", "Test Title3", 231, "Test Publisher3", 1991
+    );
 // The sample books are added to the library
 theLibrary.addBook(sampleBook);
 theLibrary.addBook(sampleBook2);
@@ -109,7 +116,8 @@ const addBookForm = document.getElementById('add-book-form');
 addBookButton.addEventListener('click', bringInTheForm);
 // The access to the close-form-button
 const closeFormButton = document.getElementById('close-form-button');
-// When the close-form-button is clicked, the form for enterin the book info disappears
+// When the close-form-button is clicked, the form for enterin the book info 
+// disappears
 closeFormButton.addEventListener('click', magicAwayTheForm)
 // The access to the submit-book-info button
 const submitBookInfo = document.getElementById('submit-book-info');
