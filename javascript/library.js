@@ -205,6 +205,15 @@ function deliverBookInfo(evt) {
     // the paragraph with the publication date of the book is added to the book
     // list
     divBookList.appendChild(pPublicationDate);
+
+    // p element for displaying the book page number
+    let pPageNumber = document.createElement("p");
+    // the page number of the book
+    let pageNumberText = document.createTextNode(bookPageNumber);
+    // the page number is written into the paragraph
+    pPageNumber.appendChild(pageNumberText);
+    // the paragraph with the page number of the book is added to the book list
+    divBookList.appendChild(pPageNumber);
     
     // the part containing the book buttons part
     let childDiv2 = document.createElement("div");
