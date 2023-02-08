@@ -172,7 +172,7 @@ function deliverBookInfo(evt) {
     // p element for displaying the book title
     let pTitle = document.createElement("p");
     // the title of the book
-    let titleText = document.createTextNode(bookTitle);
+    let titleText = document.createTextNode("Title: " + bookTitle);
     // the title of the book is written into the paragraph
     pTitle.appendChild(titleText);
     // the paragraph with the title of the book is added to the book list
@@ -181,7 +181,7 @@ function deliverBookInfo(evt) {
     // p element for displaying the book author
     let pAuthor = document.createElement("p");
     // the author of the book
-    let authorText = document.createTextNode(bookAuthor);
+    let authorText = document.createTextNode("Author: " + bookAuthor);
     // the author is written into the paragraph
     pAuthor.appendChild(authorText);
     // the paragraph with the author of the book is added to the book list
@@ -190,7 +190,7 @@ function deliverBookInfo(evt) {
     // p element for displaying the book publisher
     let pPublisher = document.createElement("p");
     // the publisher of the book
-    let publisherText = document.createTextNode(bookPublisher);
+    let publisherText = document.createTextNode("Publisher: " + bookPublisher);
     // the publisher is written into the paragraph
     pPublisher.appendChild(publisherText);
     // the paragraph with the publisher of the book is added to the book list
@@ -199,7 +199,9 @@ function deliverBookInfo(evt) {
     // p element for displaying the book publication date
     let pPublicationDate = document.createElement("p");
     // the publication date of the book
-    let pubDateText = document.createTextNode(bookPublicationDate);
+    let pubDateText = document.createTextNode(
+        "Publication date: " + bookPublicationDate
+        );
     // the publication date is written into the paragraph
     pPublicationDate.appendChild(pubDateText);
     // the paragraph with the publication date of the book is added to the book
@@ -209,7 +211,9 @@ function deliverBookInfo(evt) {
     // p element for displaying the book page number
     let pPageNumber = document.createElement("p");
     // the page number of the book
-    let pageNumberText = document.createTextNode(bookPageNumber);
+    let pageNumberText = document.createTextNode(
+        "Number of pages: " + bookPageNumber
+        );
     // the page number is written into the paragraph
     pPageNumber.appendChild(pageNumberText);
     // the paragraph with the page number of the book is added to the book list
