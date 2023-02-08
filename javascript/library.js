@@ -186,6 +186,15 @@ function deliverBookInfo(evt) {
     pAuthor.appendChild(authorText);
     // the paragraph with the author of the book is added to the book list
     divBookList.appendChild(pAuthor);
+
+    // p element for displaying the book publisher
+    let pPublisher = document.createElement("p");
+    // the publisher of the book
+    let publisherText = document.createTextNode(+ bookPublisher);
+    // the publisher of the book is displayed
+    pPublisher.appendChild(publisherText);
+    // the paragraph with the publisher of the book is added to the book list
+    divBookList.appendChild(pPublisher);
     
     
     // the part containing the book buttons part
