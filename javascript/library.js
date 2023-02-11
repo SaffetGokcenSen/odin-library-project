@@ -164,6 +164,8 @@ function deliverBookInfo(evt) {
 
     // the div containing the book info part and the book buttons part
     let parentDiv = document.createElement("div");
+    // set the class of the parent div to the class "parent-div"
+    parentDiv.classList.add("parent-div");
 
     
     // the part containing the book info
