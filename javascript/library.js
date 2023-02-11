@@ -221,7 +221,9 @@ function deliverBookInfo(evt) {
     // div
     childDiv1.appendChild(pPageNumber);
 
+    // add the book info div to the parent div
     parentDiv.appendChild(childDiv1);
+    // add the parent div with the book info div and book button div to the list
     divBookList.appendChild(parentDiv);
     
     // the part containing the book buttons part
