@@ -230,6 +230,8 @@ function deliverBookInfo(evt) {
     
     // the part containing the book buttons part
     let childDiv2 = document.createElement("div");
+    // the class of the book buttons div is set
+    childDiv2.classList.add("book-buttons");
 
     // create a button to remove the book from the library
     let removeButton = document.createElement("input");
