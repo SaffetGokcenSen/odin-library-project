@@ -241,6 +241,18 @@ function deliverBookInfo(evt) {
     removeButton.classList.add ("remove-book")
     // the button is added to the button div
     childDiv2.appendChild(removeButton);
+
+    // create a button to update the read status of the book
+    let readStatusUpdateButton = document.createElement("input");
+    // the type of the button is set
+    removeButton.type = "button";
+    // set the label of the button
+    removeButton.value = "Update the read status";
+    // the class of the button is set
+    removeButton.classList.add ("update-read-status")
+    // the button is added to the button div
+    childDiv2.appendChild(readStatusUpdateButton);
+
     // the button div is added to the parent div
     parentDiv.appendChild(childDiv2);
 }
