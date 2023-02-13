@@ -245,11 +245,11 @@ function deliverBookInfo(evt) {
     // create a button to update the read status of the book
     let readStatusUpdateButton = document.createElement("input");
     // the type of the button is set
-    removeButton.type = "button";
+    readStatusUpdateButton.type = "button";
     // set the label of the button
-    removeButton.value = "Update the read status";
+    readStatusUpdateButton.value = "Update the read status";
     // the class of the button is set
-    removeButton.classList.add ("update-read-status")
+    readStatusUpdateButton.classList.add ("update-read-status")
     // the button is added to the button div
     childDiv2.appendChild(readStatusUpdateButton);
 
