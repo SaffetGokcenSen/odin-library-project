@@ -170,6 +170,8 @@ function deliverBookInfo(evt) {
     
     // the part containing the book info
     let childDiv1 = document.createElement("div");
+    // the class of the childDiv1 is set
+    childDiv1.classList.add("book-info");
 
     // p element for displaying the book title
     let pTitle = document.createElement("p");
@@ -233,6 +235,8 @@ function deliverBookInfo(evt) {
     // the class of the book buttons div is set
     childDiv2.classList.add("book-buttons");
 
+    // create the p element for the remove book button
+    let pRemoveBookButton = document.createElement("p");
     // create a button to remove the book from the library
     let removeButton = document.createElement("input");
     // the type of the button is set
@@ -241,9 +245,13 @@ function deliverBookInfo(evt) {
     removeButton.value = "Remove from the library";
     // the class of the button is set
     removeButton.classList.add ("remove-book")
-    // the button is added to the button div
-    childDiv2.appendChild(removeButton);
+    // add the remove book button to the paragraph
+    pRemoveBookButton.appendChild(removeButton);
+    // the paragraph with the button is added to the button div
+    childDiv2.appendChild(pRemoveBookButton);
 
+    // create the p element for the read-status update book button
+    let pReadStatusUpdateButton = document.createElement("p");
     // create a button to update the read status of the book
     let readStatusUpdateButton = document.createElement("input");
     // the type of the button is set
@@ -252,8 +260,10 @@ function deliverBookInfo(evt) {
     readStatusUpdateButton.value = "Update the read status";
     // the class of the button is set
     readStatusUpdateButton.classList.add ("update-read-status")
-    // the button is added to the button div
-    childDiv2.appendChild(readStatusUpdateButton);
+    // add the read-status update button to the paragraph
+    pReadStatusUpdateButton.appendChild(readStatusUpdateButton);
+    // the paragraph with the button is added to the button div
+    childDiv2.appendChild(pReadStatusUpdateButton);
 
     // the button div is added to the parent div
     parentDiv.appendChild(childDiv2);
