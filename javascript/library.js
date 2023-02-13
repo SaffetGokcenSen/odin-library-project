@@ -231,7 +231,6 @@ function deliverBookInfo(evt) {
     // the part containing the book buttons part
     let childDiv2 = document.createElement("div");
 
-    var input = document.createElement("input");
     // create a button to remove the book from the library
     let removeButton = document.createElement("input");
     // the type of the button is set
