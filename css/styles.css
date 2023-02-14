@@ -39,8 +39,10 @@
 .book-buttons {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .book-info {
     margin-left: 1%;
+    flex: 2;
 }
