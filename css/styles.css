@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #add-book-form {
     display: none;
 }
