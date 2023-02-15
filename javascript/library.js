@@ -244,7 +244,7 @@ function deliverBookInfo(evt) {
     // set the label of the button
     removeButton.value = "Remove from the library";
     // the class of the button is set
-    removeButton.classList.add ("remove-book")
+    removeButton.classList.add ("remove-book");
     // add the remove book button to the paragraph
     pRemoveBookButton.appendChild(removeButton);
     // the paragraph with the button is added to the button div
@@ -259,7 +259,7 @@ function deliverBookInfo(evt) {
     // set the label of the button
     readStatusUpdateButton.value = "Update the read status";
     // the class of the button is set
-    readStatusUpdateButton.classList.add ("update-read-status")
+    readStatusUpdateButton.classList.add ("update-read-status");
     // add the read-status update button to the paragraph
     pReadStatusUpdateButton.appendChild(readStatusUpdateButton);
     // the paragraph with the button is added to the button div
