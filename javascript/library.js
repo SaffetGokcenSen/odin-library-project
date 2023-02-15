@@ -85,28 +85,6 @@ class Book {
 
 // Create a new Library object
 const theLibrary = new Library();
-// Create the first sample book object
-const sampleBook = new Book(
-    "Test Author", "Test Title", 300, "Test Publisher", 1990
-    );
-// Create the second sample book object
-const sampleBook2 = new Book(
-    "Test Author2", "Test Title2", 423, "Test Publisher2", 2010
-    );
-// Create the third sample book object
-const sampleBook3 = new Book(
-    "Test Author3", "Test Title3", 231, "Test Publisher3", 1991
-    );
-// The sample books are added to the library
-theLibrary.addBook(sampleBook);
-theLibrary.addBook(sampleBook2);
-theLibrary.addBook(sampleBook3);
-// The read status of the second sample boook is updated
-sampleBook2.setReadStatus(true);
-// The first book is removed from the library
-sampleBook.removeMeFromLibrary(theLibrary);
-// The books in the library are printed to the console
-theLibrary.printBooks();
 
 // The access to the add-book-button
 const addBookButton = document.getElementById('add-book-button');
@@ -157,8 +135,6 @@ function deliverBookInfo(evt) {
     theLibrary.addBook(theBook);
     // The add-book-form is reset
     addBookForm.reset();
-    // The books are printed to the console for test purposes
-    theLibrary.printBooks();
     // The add-book-form disappears
     addBookForm.style.display = "none";
 
