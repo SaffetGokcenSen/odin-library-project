@@ -102,6 +102,9 @@ function magicAwayTheForm() {
     addBookForm.style.display = "none";
 }
 
+// Create a new Library object
+const theLibrary = new Library();
+
 // This function submits the book info
 function deliverBookInfo(evt) {
     evt.preventDefault();
@@ -231,9 +234,6 @@ function deliverBookInfo(evt) {
     // the button div is added to the parent div
     parentDiv.appendChild(childDiv2);
 }
-
-// Create a new Library object
-const theLibrary = new Library();
 
 // The access to the add-book-button
 const addBookButton = document.getElementById('add-book-button');
