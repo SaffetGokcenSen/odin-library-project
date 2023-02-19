@@ -89,6 +89,9 @@ class Book {
     }
 }
 
+// The access to the add-book-form
+const addBookForm = document.getElementById('add-book-form');
+
 // This function makes the add-book-form appear
 function bringInTheForm() {
     addBookForm.style.display = "block";
@@ -234,8 +237,6 @@ const theLibrary = new Library();
 
 // The access to the add-book-button
 const addBookButton = document.getElementById('add-book-button');
-// The access to the add-book-form
-const addBookForm = document.getElementById('add-book-form');
 // When the add-book-button is clicked, a form for entering book info appears
 addBookButton.addEventListener('click', bringInTheForm);
 // The access to the close-form-button
