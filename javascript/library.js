@@ -105,6 +105,9 @@ function magicAwayTheForm() {
 // Create a new Library object
 const theLibrary = new Library();
 
+// the access to the book list div
+let divBookList = document.getElementById("book-list");
+
 // This function submits the book info
 function deliverBookInfo(evt) {
     evt.preventDefault();
@@ -248,6 +251,3 @@ closeFormButton.addEventListener('click', magicAwayTheForm)
 const submitBookInfo = document.getElementById('submit-book-info');
 // When the submit-book-info button is clicked, the information is recorded
 submitBookInfo.addEventListener('click', deliverBookInfo);
-
-// the access to the book list div
-let divBookList = document.getElementById("book-list");
