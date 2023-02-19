@@ -106,16 +106,16 @@ function magicAwayTheForm() {
 const theLibrary = new Library();
 
 // the access to the book list div
-let divBookList = document.getElementById("book-list");
+const divBookList = document.getElementById("book-list");
 
 // This function submits the book info
 function deliverBookInfo(evt) {
     evt.preventDefault();
-    let bookTitle = document.getElementById('book-title').value;
-    let bookAuthor = document.getElementById('author-name').value;
-    let bookPublisher = document.getElementById('publisher').value;
-    let bookPublicationDate = document.getElementById('publication-date').value;
-    let bookPageNumber = document.getElementById('number-of-pages').value;
+    const bookTitle = document.getElementById('book-title').value;
+    const bookAuthor = document.getElementById('author-name').value;
+    const bookPublisher = document.getElementById('publisher').value;
+    const bookPublicationDate = document.getElementById('publication-date').value;
+    const bookPageNumber = document.getElementById('number-of-pages').value;
     // A new book is created using the form values
     const theBook = new Book(
         bookAuthor, 
@@ -132,38 +132,38 @@ function deliverBookInfo(evt) {
     addBookForm.style.display = "none";
 
     // the div containing the book info part and the book buttons part
-    let parentDiv = document.createElement("div");
+    const parentDiv = document.createElement("div");
     // set the class of the parent div to the class "parent-div"
     parentDiv.classList.add("parent-div");
 
     
     // the part containing the book info
-    let childDiv1 = document.createElement("div");
+    const childDiv1 = document.createElement("div");
     // the class of the childDiv1 is set
     childDiv1.classList.add("book-info");
 
     // p element for displaying the book title
-    let pTitle = document.createElement("p");
+    const pTitle = document.createElement("p");
     // the title of the book
-    let titleText = document.createTextNode("Title: " + bookTitle);
+    const titleText = document.createTextNode("Title: " + bookTitle);
     // the title of the book is written into the paragraph
     pTitle.appendChild(titleText);
     // the paragraph with the title of the book is added to the book info div
     childDiv1.appendChild(pTitle);
 
     // p element for displaying the book author
-    let pAuthor = document.createElement("p");
+    const pAuthor = document.createElement("p");
     // the author of the book
-    let authorText = document.createTextNode("Author: " + bookAuthor);
+    const authorText = document.createTextNode("Author: " + bookAuthor);
     // the author is written into the paragraph
     pAuthor.appendChild(authorText);
     // the paragraph with the author of the book is added to the book info div
     childDiv1.appendChild(pAuthor);
 
     // p element for displaying the book publisher
-    let pPublisher = document.createElement("p");
+    const pPublisher = document.createElement("p");
     // the publisher of the book
-    let publisherText = document.createTextNode("Publisher: " + bookPublisher);
+    const publisherText = document.createTextNode("Publisher: " + bookPublisher);
     // the publisher is written into the paragraph
     pPublisher.appendChild(publisherText);
     // the paragraph with the publisher of the book is added to the book info 
@@ -171,9 +171,9 @@ function deliverBookInfo(evt) {
     childDiv1.appendChild(pPublisher);
     
     // p element for displaying the book publication date
-    let pPublicationDate = document.createElement("p");
+    const pPublicationDate = document.createElement("p");
     // the publication date of the book
-    let pubDateText = document.createTextNode(
+    const pubDateText = document.createTextNode(
         "Publication date: " + bookPublicationDate
         );
     // the publication date is written into the paragraph
@@ -183,9 +183,9 @@ function deliverBookInfo(evt) {
     childDiv1.appendChild(pPublicationDate);
 
     // p element for displaying the book page number
-    let pPageNumber = document.createElement("p");
+    const pPageNumber = document.createElement("p");
     // the page number of the book
-    let pageNumberText = document.createTextNode(
+    const pageNumberText = document.createTextNode(
         "Number of pages: " + bookPageNumber
         );
     // the page number is written into the paragraph
@@ -200,14 +200,14 @@ function deliverBookInfo(evt) {
     divBookList.appendChild(parentDiv);
     
     // the part containing the book buttons part
-    let childDiv2 = document.createElement("div");
+    const childDiv2 = document.createElement("div");
     // the class of the book buttons div is set
     childDiv2.classList.add("book-buttons");
 
     // create the p element for the remove book button
-    let pRemoveBookButton = document.createElement("p");
+    const pRemoveBookButton = document.createElement("p");
     // create a button to remove the book from the library
-    let removeButton = document.createElement("input");
+    const removeButton = document.createElement("input");
     // the type of the button is set
     removeButton.type = "button";
     // set the label of the button
@@ -220,9 +220,9 @@ function deliverBookInfo(evt) {
     childDiv2.appendChild(pRemoveBookButton);
 
     // create the p element for the read-status update book button
-    let pReadStatusUpdateButton = document.createElement("p");
+    const pReadStatusUpdateButton = document.createElement("p");
     // create a button to update the read status of the book
-    let readStatusUpdateButton = document.createElement("input");
+    const readStatusUpdateButton = document.createElement("input");
     // the type of the button is set
     readStatusUpdateButton.type = "button";
     // set the label of the button
