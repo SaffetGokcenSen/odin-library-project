@@ -8,9 +8,14 @@ class Library {
         this.#books = books;
     }
 
-    // the method for printing the information of each book in the library
-    printBooks() {
-        console.log(this.#books);
+    // get the array of the names of the books in the library
+    getBookNamesArray() {
+        return Object.getOwnPropertyNames(this.#books);
+    }
+
+    // gets the book object with the specified name
+    getBook(nameOfBook) {
+        return this.#books[nameOfBook];
     }
 
     // add a new book to the #books object with the key equal to the title of 
@@ -136,7 +141,7 @@ function deliverBookInfo(evt) {
     // set the class of the parent div to the class "parent-div"
     parentDiv.classList.add("parent-div");
 
-    
+
     // the part containing the book info
     const childDiv1 = document.createElement("div");
     // the class of the childDiv1 is set
