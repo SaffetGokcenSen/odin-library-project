@@ -109,7 +109,7 @@ function magicAwayTheForm() {
 
 // the function for displaying the book info and buttons
 function displayBookInfoAndButtons(
-    theDiv, theTitle, theAuthor, thePublisher, thePubDate, thePageNumber
+    theLib, theDiv, theTitle, theAuthor, thePublisher, thePubDate, thePageNumber
     ) {
     // the div containing the book info part and the book buttons part
     const parentDiv = document.createElement("div");
@@ -194,6 +194,11 @@ function displayBookInfoAndButtons(
     removeButton.value = "Remove from the library";
     // the class of the button is set
     removeButton.classList.add ("remove-book");
+
+    removeButton.addEventListener('click', () => {
+        theLib.removeBook(theTitle);
+    });
+
     // add the remove book button to the paragraph
     pRemoveBookButton.appendChild(removeButton);
     // the paragraph with the button is added to the button div
@@ -248,8 +253,8 @@ function deliverBookInfo(evt) {
     addBookForm.style.display = "none";
 
     displayBookInfoAndButtons(
-        divBookList, bookTitle, bookAuthor, bookPublisher, bookPublicationDate, 
-        bookPageNumber
+        theLibrary, divBookList, bookTitle, bookAuthor, bookPublisher, 
+        bookPublicationDate, bookPageNumber
     );
 }
 
@@ -261,7 +266,7 @@ function printBooksAfterRemove() {
         const nextBook = theLibrary.getBook(bookName);
 
         displayBookInfoAndButtons(
-            divBookList, nextBook.getTitle(), nextBook.getAuthor(), 
+            theLibrary, divBookList, nextBook.getTitle(), nextBook.getAuthor(), 
             nextBook.getPublisher(), nextBook.getPublicationDate(), 
             nextBook.getNumOfPages()
         );
