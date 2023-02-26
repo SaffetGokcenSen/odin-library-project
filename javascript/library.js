@@ -197,6 +197,7 @@ function displayBookInfoAndButtons(
 
     removeButton.addEventListener('click', () => {
         theLib.removeBook(theTitle);
+        removeButton.parentElement.parentElement.parentElement.remove();
     });
 
     // add the remove book button to the paragraph
