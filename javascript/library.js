@@ -259,21 +259,6 @@ function deliverBookInfo(evt) {
     );
 }
 
-// This function prints the remaining books when the remove book button is 
-// clicked
-function printBooksAfterRemove() {
-    const bookNameArray = theLibrary.getBookNamesArray();
-    bookNameArray.forEach(bookName => {
-        const nextBook = theLibrary.getBook(bookName);
-
-        displayBookInfoAndButtons(
-            theLibrary, divBookList, nextBook.getTitle(), nextBook.getAuthor(), 
-            nextBook.getPublisher(), nextBook.getPublicationDate(), 
-            nextBook.getNumOfPages()
-        );
-    })
-}
-
 // The access to the add-book-button
 const addBookButton = document.getElementById('add-book-button');
 // When the add-book-button is clicked, a form for entering book info appears
