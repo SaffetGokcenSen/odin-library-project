@@ -174,6 +174,16 @@ function displayBookInfoAndButtons(
     // div
     childDiv1.appendChild(pPageNumber);
 
+    // p element for displaying the read status of the book
+    const pReadStatus = document.createElement("p");
+    // the read status of the book
+    const readStatusText = document.createTextNode("Read: No");
+    // the read status is written into the paragraph
+    pReadStatus.appendChild(readStatusText);
+    // the paragraph with the read status of the book is added to the book info 
+    // div
+    childDiv1.appendChild(pReadStatus);
+
     // add the book info div to the parent div
     parentDiv.appendChild(childDiv1);
     // add the parent div with the book info div and book button div to the list
