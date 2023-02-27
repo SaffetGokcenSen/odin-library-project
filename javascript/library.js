@@ -109,7 +109,8 @@ function magicAwayTheForm() {
 
 // the function for displaying the book info and buttons
 function displayBookInfoAndButtons(
-    theLib, theDiv, theTitle, theAuthor, thePublisher, thePubDate, thePageNumber
+    theLib, theBook, theDiv, theTitle, theAuthor, thePublisher, thePubDate, 
+    thePageNumber
     ) {
     // the div containing the book info part and the book buttons part
     const parentDiv = document.createElement("div");
@@ -225,6 +226,19 @@ function displayBookInfoAndButtons(
     readStatusUpdateButton.value = "Update the read status";
     // the class of the button is set
     readStatusUpdateButton.classList.add ("update-read-status");
+
+    readStatusUpdateButton.addEventListener('click', () => {
+        const bookReadStatus = theBook.getReadStatus();
+        if (!bookReadStatus) {
+            theBook.setReadStatus(true);
+            readStatusText.textContent = "Read: Yes";
+        }
+        else {
+            theBook.setReadStatus(false);
+            readStatusText.textContent = "Read: No";
+        }
+    });
+
     // add the read-status update button to the paragraph
     pReadStatusUpdateButton.appendChild(readStatusUpdateButton);
     // the paragraph with the button is added to the button div
@@ -264,7 +278,7 @@ function deliverBookInfo(evt) {
     addBookForm.style.display = "none";
 
     displayBookInfoAndButtons(
-        theLibrary, divBookList, bookTitle, bookAuthor, bookPublisher, 
+        theLibrary, theBook, divBookList, bookTitle, bookAuthor, bookPublisher, 
         bookPublicationDate, bookPageNumber
     );
 }
