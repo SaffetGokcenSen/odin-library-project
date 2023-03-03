@@ -58,3 +58,15 @@
     margin-left: 1%;
     flex: 2;
 }
+
+.book-info > p {
+    margin: 3%;
+}
+
+.book-info > p:first-child {
+    margin-top: 1%;
+}
+
+.book-info > p:last-child {
+    margin-bottom: 1%;
+}
